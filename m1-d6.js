@@ -106,22 +106,22 @@ console.log(deleteOne("hello",true))
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
-const onlyLetters = function(astring){
-    let temp = astring.split("")
+// const onlyLettemmmgmrs = function(astring){
+//     let temp = astring.split("")
 
-    for(let i = 0; i < temp.length; i++){
+//     for(let i = 0; i < temp.length; i++){
 
-        for(let j = 0; j <= 9; j++){
-            if( temp[i] == j ){
-                temp[i] = ""
-                break
-             }
-        }
-    }
-    return temp.join("")
-}
+//         for(let j = 0; j <= 9; j++){
+//             if( temp[i] == j ){
+//                 temp[i] = ""
+//                 break
+//              }
+//         }
+//     }
+//     return temp.join("")
+// }
 
-console.log(onlyLetters("I1 2l3i4v5e6 7i8n9 1L2i3s4b5o6n7 1102, 22 1P2o3r4t5u5g6a7l8"))
+// console.log(onlyLetters("I1 2l3i4v5e6 7i8n9 1L2i3s4b5o6n7 1102, 22 1P2o3r4t5u5g6a7l8"))
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
@@ -158,10 +158,26 @@ console.log(isThisAnEmail("onlyrajib@gmail.com"))
         values: [3, 3, 4]
     }
 */
+let sumOfArray8 = 0;
+let answer8Array = []
+const rollTheDices = function(rolls){
+    for(let i = 0; i < rolls; i++){
+       let temp = dice()
+       sumOfArray8 += temp 
+        answer8Array.push(temp)
+    }
+    console.log(answer8Array) 
+    console.log(sumOfArray8) 
+}
 
+rollTheDices(7)
+console.log()
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
+
+
+
 
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
@@ -174,7 +190,12 @@ console.log(isThisAnEmail("onlyrajib@gmail.com"))
    Write a function called deleteProp which receives an object and a string as parameters,
    and returns the given object after deleting its property named as the given string.
 */
+const deleteProp = function(anObject,aString){
+        
+}
+let anObject = {name:'rajib', surname:'jon', course:'FS oct 21', courseDuration:'6months' }
 
+deleteProp(anObject, 'courseDuration')
 /* EXERCISE 12
     Write a function called oldestMovie which finds the oldest movie in the provided movies array.
 */
@@ -223,6 +244,21 @@ console.log(isThisAnEmail("onlyrajib@gmail.com"))
   **
   ***
 */
+let answer21Array
+const halfTree = function(treeHeight){
+   
+    for(let i = 0; i <=treeHeight; i++){
+        answer21Array =""
+        let j = 0 
+        while(j <= i){
+            answer21Array += "*"
+            j++
+        }
+        console.log(answer21Array)
+    }
+}
+ 
+halfTree(2)
 
 /* EXERCISE 22 
   Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
@@ -232,10 +268,44 @@ console.log(isThisAnEmail("onlyrajib@gmail.com"))
    *** 
   *****
 */
+let answer22 = ""
+const tree = function(treeHeight){
+        for(let i = 0; i <=treeHeight; i++){
+            answer22 = ""      
+                for(let k = 0; k <= (treeHeight - i); k++) {
+                     answer22 += " "
+                } 
+                for(let j = 0; j < i; j++){
+            answer22 += "*"
+      } 
+                for(let j = 1; j < i; j++){
+            answer22 += "*"
+}
+        console.log(answer22)
+    }
+
+}
+tree(10)
 
 /* EXERCISE 23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
+let multipleCounter = 0
+const isItPrime = function(aNumber){
+    for(let i = 1; i < aNumber; i++){
+        if(aNumber%i === 0){
+            multipleCounter++
+        }
+    }
+    if(multipleCounter > 1){
+        console.log('\n', aNumber, 'is not a PRIME NUMBER')
+    }
+    else{
+        console.log('\n', aNumber, 'is a PRIME NUMBER')
+    }
+}
+
+isItPrime(13)
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
